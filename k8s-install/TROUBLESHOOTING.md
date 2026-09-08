@@ -24,8 +24,6 @@
   EOF
   systemctl restart kubelet
   kubectl delete pod -n kube-flannel --all
-
-
 2. Ошибки TLS при скачивании манифестов и образов
 
 Симптом: tls: failed to verify certificate, 403 Forbidden при обращении к raw.githubusercontent.com или ghcr.io.
@@ -114,15 +112,3 @@ bash
 
 systemctl enable --now containerd kubelet docker
 
-text
-
-
-## Обновляем `k8s-install/README.md`
-
-Теперь нужно добавить ссылку на файл траблшутинга в README раздела k8s-install. Открой файл:
-
-```bash
-nano k8s-install/README.md
-
-
-Подробные инструкции по устранению типичных ошибок смотрите в [TROUBLESHOOTING.md](./TROUBLESHOOTING.md).
